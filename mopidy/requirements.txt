@@ -8,3 +8,4 @@ Mopidy-SoundCloud==3.0.1
 Mopidy-GMusic==4.0.1
 Mopidy-Youtube==3.2
 Mopidy-MPD==3.1.0
+Mopidy-Mobile==1.9.1
