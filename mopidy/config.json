@@ -6,7 +6,7 @@
   "description": "Mopidy is an extensible music server",
   "url": "https://github.com/hassio-addons/addon-mopidy",
   "ingress": true,
-  "ingress_entry": "iris/",
+  "ingress_entry": "mobile/",
   "arch": ["amd64"],
   "auth_api": true,
   "audio": true,
@@ -32,8 +32,8 @@
     "python_packages": ["str"],
     "settings": [
       {
-        "name": "str",
-        "value": "str"
+        "name": "local/media_dir",
+        "value": "/share/mopidy/media"
       }
     ],
     "leave_front_door_open": "bool?"
