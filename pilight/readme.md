@@ -1,3 +1,3 @@
-# Pilight on Hassio for RPI3
+# Pilight on Hassio for RPI4
 
 Pilight add-on for Hassio
