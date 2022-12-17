@@ -1,7 +1,7 @@
 {
     "arch": ["armv7", "armhf"],
     "name": "pilight",
-    "version": "1.0.3", 
+    "version": "1.0.4", 
     "slug": "pilight",
     "description": "Pilight server",
     "startup": "services",
