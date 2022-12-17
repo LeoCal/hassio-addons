@@ -6,7 +6,7 @@
     "description": "Pilight server",
     "startup": "services",
     "boot": "auto",
-    "devices": ["/dev/mem:/dev/mem:rw"],
+    "devices": ["/dev/mem:/dev/mem:rwm"],
     "full_access": true,
     "options": {
       "sender": 1,
