@@ -14,7 +14,8 @@
         "webserver-https-port": 5002,
         "webserver-cache": 1,
         "whitelist": "*.*.*.*",
-        "gpio-platform": "raspberrypi3"
+        "gpio-platform": "raspberrypi4",
+        "mqtt-enable": 0
     },
     "hardware": {
         "433gpio": {
