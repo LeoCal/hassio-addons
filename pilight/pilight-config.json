@@ -27,7 +27,8 @@
         "webserver": {
             "ssl": {
                 "certificate": {
-                    "location": "/etc/pilight/pilight.pem"
+                    "location": "/etc/pilight/pilight.pem",
+                    "secure": 0
                 }
             }
         },
@@ -38,7 +39,7 @@
         },
         "hardware": {
             "RF433": {
-                "mingaplen": 4420,
+                "mingaplen": 3600,
                 "maxgaplen": 72900,
                 "minrawlen": 26,
                 "maxrawlen": 400
