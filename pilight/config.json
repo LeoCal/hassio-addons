@@ -6,7 +6,7 @@
     "description": "Pilight server",
     "startup": "services",
     "boot": "auto",
-    "devices": ["/dev/mem:/dev/mem:rwm"],
+    "devices": ["/dev/mem"],
     "full_access": true,
     "options": {
       "sender": 1,
@@ -16,7 +16,7 @@
       "sender": "int",
       "receiver": "int"
     },
-    "privileged": ["SYS_RAWIO"],
+    "privileged": ["SYS_RAWIO", "SYS_NICE"],
     "gpio": "true",
     "webui": "http://[HOST]:[PORT:5001]",
     "ports": {
