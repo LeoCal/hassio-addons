@@ -1,9 +1,9 @@
 {
     "build_from": {
-	"armhf" : "leocal/armhf-debian-base:stretch",
-    "armv7" : "leocal/armhf-debian-base:stretch",
-	"aarch64": "leocal/aarch64-debian-base:stretch",
-	"amd64" : "amd64/debian:stretch",
-	"i386" : "i386/debian:stretch"
+	"armhf" : "leocal/mopidy-buster-armhf",
+        "armv7" : "leocal/mopidy-buster-armv7",
+	"aarch64": "leocal/leocal/mopidy-buster-aarch64",
+	"amd64" : "leocal/mopidy-buster-amd64",
+	"i386" : "leocal/leocal/mopidy-buster-i386"
     }
 }
