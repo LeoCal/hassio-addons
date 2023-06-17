@@ -19,6 +19,8 @@ RUN apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -y mopidy && \
     apt install -y python3-pip && \
     pip3 install Mopidy-Mobile MopidyCLI && \
+    mkdir -p /var/lib/mopidy/.config/mopidy && \
+    mkdir -p /data && \
     apt-get clean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
