@@ -1,9 +1,8 @@
 {
-    "build_from": {
-	"armhf" : "bestlibre/armhf-debian-base:stretch",
-    "armv7" : "bestlibre/armhf-debian-base:stretch",
-	"aarch64": "bestlibre/aarch64-debian-base:stretch",
-	"amd64" : "amd64/debian:stretch",
-	"i386" : "i386/debian:stretch"
-    }
+  "build_from": {
+    "aarch64": "homeassistant/aarch64-base-debian:buster",
+    "amd64": "homeassistant/amd64-base-debian:buster",
+    "armv7": "homeassistant/armv7-base-debian:buster",
+    "armhf": "homeassistant/armv7-base-debian:buster"
+  }
 }
