@@ -18,7 +18,5 @@ RUN wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/buster
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -y mopidy
 
-RUN pip install Mopidy-Mobile MopidyCLI
-
 EXPOSE 6600 6680
 CMD [ "/run.sh" ]
