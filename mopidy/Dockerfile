@@ -18,7 +18,7 @@ RUN wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/buster
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -y mopidy && \
     apt install -y python3-pip && \
-    pip3 install Mopidy-Mobile MopidyCLI && \
+    pip3 install Mopidy-Mobile Mopidy-Local MopidyCLI && \
     mkdir -p /var/lib/mopidy/.config/mopidy && \
     mkdir -p /data && \
     apt-get clean && \
