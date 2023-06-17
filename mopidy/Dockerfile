@@ -16,7 +16,18 @@ RUN apt-get update && \
 RUN wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/buster.list
 
 RUN apt update && \
-    DEBIAN_FRONTEND=noninteractive apt install -y mopidy
+    DEBIAN_FRONTEND=noninteractive apt install -y mopidy && \
+    apt install python3-pip && \
+    pip3 install Mopidy-Mobile MopidyCLI && \
+    apt-get clean && \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
+
+COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
+
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
 
 EXPOSE 6600 6680
 CMD [ "/run.sh" ]
