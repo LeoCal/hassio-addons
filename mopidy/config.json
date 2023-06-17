@@ -1,6 +1,6 @@
 {
     "name": "Mopidy",
-    "version": "0.2.16",
+    "version": "0.2.17",
     "slug": "mopidy",
     "description": "mopidy music server",
     "url": "https://github.com/LeoCal/hassio-addons/tree/master/mopidy",
