@@ -8,35 +8,13 @@ ENV LANG C.UTF-8
 RUN set -ex \
     # Official Mopidy install for Debian/Ubuntu along with some extensions
     # (see https://docs.mopidy.com/en/latest/installation/debian/ )
- && apt-get update \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-	build-essential \
-        curl \
-        gcc \
-	gstreamer1.0-alsa \
-	gstreamer1.0-fluendo-mp3 \
-	gstreamer1.0-libav \
-	libxml2-dev \
-	libxslt-dev \
-	libz-dev \
-	jq \
-	python-crypto \
-	python-dev \
- && curl -L https://apt.mopidy.com/mopidy.gpg -o /tmp/mopidy.gpg \
- && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
- && apt-key add /tmp/mopidy.gpg \
- && apt-get update \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-        jq mopidy mopidy-local-sqlite mpc \
- && curl -L https://bootstrap.pypa.io/get-pip.py | python - \
- && pip install -U six oauth2client pyasn1 \
- && pip install \
+ && wget -q -O - https://apt.mopidy.com/mopidy.gpg | sudo apt-key add - \
+ && sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/buster.list \
+ && sudo apt update \
+ && sudo apt install -y mopidy jq mpc \
+ && sudo pip install \
 	Mopidy-Mobile \
-        MopidyCLI \
- && apt-get purge --auto-remove -y \
-        curl \
-        gcc \
-	build-essential \
+     MopidyCLI \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 
