@@ -16,11 +16,7 @@ RUN wget -q -O /etc/apt/keyrings/mopidy-archive-keyring.gpg https://apt.mopidy.c
     wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/buster.list
 
 RUN apt update && \
-    apt install mopidy && \
-    pip install Mopidy-Mobile MopidyCLI && \
-    apt-get clean && \
-    apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
+    apt install mopidy
 
 EXPOSE 6600 6680
 CMD [ "/run.sh" ]
