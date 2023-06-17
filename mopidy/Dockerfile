@@ -17,9 +17,7 @@ RUN apt-get update && \
     apt install mopidy jq && \
     pip install Mopidy-Mobile MopidyCLI && \
     apt-get clean && \
-    apt-get autoremove -y &&
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
-
+    apt-get autoremove -y
 
 COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
 
