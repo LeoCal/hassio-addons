@@ -6,6 +6,7 @@
     "description": "Pilight server",
     "startup": "services",
     "boot": "auto",
+    "image": "leocal/{arch}-addon-pilight",
     "devices": ["/dev/mem"],
     "full_access": true,
     "options": {
