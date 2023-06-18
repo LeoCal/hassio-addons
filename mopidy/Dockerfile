@@ -7,7 +7,6 @@ ARG BUILD_VERSION
 LABEL maintainer "LeoCal"
 
 #Install mopidy
-
 RUN apt-get update && \
     apt-get install -y wget gnupg jq && \
     mkdir -p /etc/apt/keyrings && \
