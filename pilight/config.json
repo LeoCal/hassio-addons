@@ -1,6 +1,6 @@
 {
     "arch": ["armv7", "armhf"],
-    "name": "pilight",
+    "name": "Pilight",
     "version": "1.0.6", 
     "slug": "pilight",
     "description": "Pilight server",
