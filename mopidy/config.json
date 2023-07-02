@@ -6,6 +6,7 @@
     "url": "https://github.com/LeoCal/hassio-addons/tree/master/mopidy",
     "startup": "application",
     "boot": "auto",
+    "image": "leocal/{arch}-addon-mopidy",
     "audio": true,
     "options": {"local_scan": true,
 	        "options": []},
